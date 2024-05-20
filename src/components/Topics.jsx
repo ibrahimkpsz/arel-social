@@ -8,7 +8,7 @@ function Topics() {
   const [trendingTopics, setTrendingTopics] = useState([]);
   useEffect(() => {
     const fetchTrendingTopics = async () => {
-      const response = await axios.get('http://localhost:3000/api/trend-topic', {
+      const response = await axios.get('http://194.163.157.146:4100/api/trend-topic', {
         headers: {
           Authorization: `Bearer ${currentUser[0].jwttoken}`
         }

@@ -24,7 +24,7 @@ function Sidebar({ toggleSidebar, isSidebarOpen }) {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const response = await axios.get('http://localhost:3000/api/user-get', {
+      const response = await axios.get('http://194.163.157.146:4100/api/user-get', {
         headers: {
           Authorization: `Bearer ${currentUser[0].jwttoken}`
         }
@@ -50,7 +50,7 @@ function Sidebar({ toggleSidebar, isSidebarOpen }) {
         </div>
         <div className={isSidebarOpen ? "flex items-center gap-3 p-5 mx-3 my-5 bg-[#F8F8F8] rounded-lg" : "flex items-center gap-0 p-5 mx-3 bg-[#F8F8F8] rounded-lg"}>
           <Avatar>
-            <AvatarImage src={`http://localhost:3000/images/${user.photo}`} />
+            <AvatarImage src={`http://194.163.157.146:4100/images/${user.photo}`} />
             <AvatarFallback>{user.username}</AvatarFallback>
           </Avatar>
           <div className={isSidebarOpen ? "block" : "hidden"}>
