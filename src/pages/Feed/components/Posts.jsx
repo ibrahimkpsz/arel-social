@@ -107,11 +107,22 @@ function Posts({ posts, onPostCreated }) {
                             <ThumbsUp className='w-5 text-[#475467]' />
                             <Text>{post.posts[0].Like} Like</Text>
                         </Button>
-                        <Button className="flex items-center gap-3" variant='outline'>
+                        <Button className="flex items-center gap-3" variant='outline' >
                             <HiChatBubbleOvalLeftEllipsis className='text-2xl text-[#475467]' />
                             <Text>{post.posts[0].TotalAnswer} Comments</Text>
                         </Button>
                     </div>
+                    <div>
+                        <ul>
+                            <li>yorum</li>
+                            <li>yorum</li>
+                            <li>yorum</li>
+                        </ul>
+                    </div>
+                    <form action="">
+                        <input type="text" />
+                        <button>gödner</button>
+                    </form>
                 </Card>
             )) : <Text className='text-center'>Posts not found.</Text>}
         </>

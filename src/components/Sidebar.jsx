@@ -29,7 +29,7 @@ function Sidebar({ toggleSidebar, isSidebarOpen }) {
           Authorization: `Bearer ${currentUser[0].jwttoken}`
         }
       });
-      setUser(response.data.data)
+      setUser(response.data.data.userData)
     }
     fetchUserData();
   }, [])

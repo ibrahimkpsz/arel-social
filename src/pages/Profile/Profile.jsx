@@ -70,7 +70,7 @@ function Profile() {
                     Authorization: `Bearer ${currentUser[0].jwttoken}`
                 }
             });
-            setUser(response.data.data)
+            setUser(response.data.data.userData)
         }
         fetchUserData();
         fetchPosts();
@@ -90,8 +90,8 @@ function Profile() {
                         </Link>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <Text>20 Gönderi</Text>
-                        <Text>100 Beğeni</Text>
+                        <Text>{user.allPostCount} Gönderi</Text>
+                        <Text>{user.allPostLikes} Beğeni</Text>
                     </div>
                     <Text className='text-black'>{user.biography}</Text>
                     <div className='flex items-center gap-2'>
