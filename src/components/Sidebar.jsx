@@ -58,7 +58,6 @@ function Sidebar({ toggleSidebar, isSidebarOpen }) {
             <p className='text-[14px] text-[#475467]'>{user.email}</p>
           </div>
         </div>
-
         <div>
           <ul className='flex flex-col py-3 gap-2'>
             {data.map((item, index) => (
